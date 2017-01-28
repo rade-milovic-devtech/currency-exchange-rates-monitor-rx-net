@@ -1,0 +1,10 @@
+# Build
+bin/
+obj/
+
+# NuGet
+packages/
+
+# Visual Studio
+.vs/
+*.user

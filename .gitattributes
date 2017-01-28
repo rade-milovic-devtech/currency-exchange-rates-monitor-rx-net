@@ -1,0 +1,6 @@
+# Automatic normalization of line endings
+*    text=auto
+
+# Merge drivers for project and solution files
+*.sln       merge=binary
+*.csproj    merge=binary
