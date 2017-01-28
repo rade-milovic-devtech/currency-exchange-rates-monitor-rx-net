@@ -10,9 +10,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyExchangeValuesMonitor.Domain", "src\CurrencyExchangeValuesMonitor.Domain\CurrencyExchangeValuesMonitor.Domain.csproj", "{DEA53107-F9AD-41A1-84D0-6ADA74300060}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyExchangeRatesMonitor.Domain", "src\Domain\CurrencyExchangeRatesMonitor.Domain.csproj", "{DEA53107-F9AD-41A1-84D0-6ADA74300060}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyExchangeValuesMonitor.Infrastructure", "src\CurrencyExchangeValuesMonitor.Infrastructure\CurrencyExchangeValuesMonitor.Infrastructure.csproj", "{CD63BE6E-C2D8-4BD0-9B22-00B9023BE30E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyExchangeRatesMonitor.Infrastructure", "src\Infrastructure\CurrencyExchangeRatesMonitor.Infrastructure.csproj", "{CD63BE6E-C2D8-4BD0-9B22-00B9023BE30E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

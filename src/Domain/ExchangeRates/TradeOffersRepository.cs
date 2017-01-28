@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace CurrencyExchangeValuesMonitor.Domain.ExchangeRates
+namespace CurrencyExchangeRatesMonitor.Domain.ExchangeRates
 {
     public interface TradeOffersRepository
     {

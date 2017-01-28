@@ -1,4 +1,4 @@
-﻿namespace CurrencyExchangeValuesMonitor.Domain.ExchangeRates
+﻿namespace CurrencyExchangeRatesMonitor.Domain.ExchangeRates
 {
     public class CurrencyPair : ValueObject<CurrencyPair>
     {

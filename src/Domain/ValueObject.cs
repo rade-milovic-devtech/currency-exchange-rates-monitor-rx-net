@@ -1,4 +1,4 @@
-﻿namespace CurrencyExchangeValuesMonitor.Domain
+﻿namespace CurrencyExchangeRatesMonitor.Domain
 {
     public abstract class ValueObject<T> where T : ValueObject<T>
     {

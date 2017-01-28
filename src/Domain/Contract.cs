@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CurrencyExchangeValuesMonitor.Domain
+namespace CurrencyExchangeRatesMonitor.Domain
 {
     public static class Contract
     {

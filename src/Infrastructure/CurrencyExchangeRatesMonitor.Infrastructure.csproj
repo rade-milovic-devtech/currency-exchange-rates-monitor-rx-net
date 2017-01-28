@@ -5,11 +5,11 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{DEA53107-F9AD-41A1-84D0-6ADA74300060}</ProjectGuid>
+        <ProjectGuid>{CD63BE6E-C2D8-4BD0-9B22-00B9023BE30E}</ProjectGuid>
         <OutputType>Library</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>CurrencyExchangeValuesMonitor.Domain</RootNamespace>
-        <AssemblyName>CurrencyExchangeValuesMonitor.Domain</AssemblyName>
+        <RootNamespace>CurrencyExchangeRatesMonitor.Infrastructure</RootNamespace>
+        <AssemblyName>CurrencyExchangeRatesMonitor.Infrastructure</AssemblyName>
         <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
     </PropertyGroup>
@@ -37,16 +37,13 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="Contract.cs" />
-        <Compile Include="Entity.cs" />
-        <Compile Include="ValueObject.cs" />
-        <Compile Include="ExchangeRates\CurrencyUnit.cs" />
-        <Compile Include="ExchangeRates\CurrencyPair.cs" />
-        <Compile Include="ExchangeRates\ExecutablePrice.cs" />
-        <Compile Include="ExchangeRates\Price.cs" />
-        <Compile Include="ExchangeRates\Traider.cs" />
-        <Compile Include="ExchangeRates\TradeOffer.cs" />
-        <Compile Include="ExchangeRates\TradeOffersRepository.cs" />
+        <Compile Include="ExchangeRates\InMemoryTradeOffersRepository.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Domain\CurrencyExchangeRatesMonitor.Domain.csproj">
+            <Project>{dea53107-f9ad-41a1-84d0-6ada74300060}</Project>
+            <Name>CurrencyExchangeRatesMonitor.Domain</Name>
+        </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

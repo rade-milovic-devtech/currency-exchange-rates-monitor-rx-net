@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CurrencyExchangeValuesMonitor.Domain.ExchangeRates
+namespace CurrencyExchangeRatesMonitor.Domain.ExchangeRates
 {
     public class Traider : ValueObject<Traider>
     {

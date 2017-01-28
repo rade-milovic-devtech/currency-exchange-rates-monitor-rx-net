@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using CurrencyExchangeValuesMonitor.Domain;
-using CurrencyExchangeValuesMonitor.Domain.ExchangeRates;
+using CurrencyExchangeRatesMonitor.Domain;
+using CurrencyExchangeRatesMonitor.Domain.ExchangeRates;
 
-namespace CurrencyExchangeValuesMonitor.Infrastructure.ExchangeRates
+namespace CurrencyExchangeRatesMonitor.Infrastructure.ExchangeRates
 {
     public class InMemoryTradeOffersRepository : TradeOffersRepository
     {
