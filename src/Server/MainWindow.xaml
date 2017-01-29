@@ -1,0 +1,17 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="CurrencyExchangeRatesMonitor.Server.MainWindow"
+        Title="MainWindow"
+        Width="525"
+        Height="350">
+    <StackPanel Orientation="Horizontal"
+                Margin="10"
+                VerticalAlignment="Top">
+        <Button Content="Start Server"
+                Margin="5"
+                Command="{Binding StartServerCommand}" />
+        <Button Content="Stop Server"
+                Margin="5"
+                Command="{Binding StopServerCommand}" />
+    </StackPanel>
+</Window>

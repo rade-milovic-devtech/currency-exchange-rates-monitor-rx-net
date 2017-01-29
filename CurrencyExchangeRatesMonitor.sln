@@ -14,6 +14,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyExchangeRatesMonito
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyExchangeRatesMonitor.Infrastructure", "src\Infrastructure\CurrencyExchangeRatesMonitor.Infrastructure.csproj", "{CD63BE6E-C2D8-4BD0-9B22-00B9023BE30E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyExchangeRatesMonitor.Server", "src\Server\CurrencyExchangeRatesMonitor.Server.csproj", "{3E81380D-0822-44FD-AD27-F0B972B38500}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyExchangeRatesMonitor.Common", "src\Common\CurrencyExchangeRatesMonitor.Common.csproj", "{7F5B8F0F-F2EC-4701-B796-87880B9659A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +32,14 @@ Global
 		{CD63BE6E-C2D8-4BD0-9B22-00B9023BE30E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD63BE6E-C2D8-4BD0-9B22-00B9023BE30E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD63BE6E-C2D8-4BD0-9B22-00B9023BE30E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E81380D-0822-44FD-AD27-F0B972B38500}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E81380D-0822-44FD-AD27-F0B972B38500}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E81380D-0822-44FD-AD27-F0B972B38500}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E81380D-0822-44FD-AD27-F0B972B38500}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F5B8F0F-F2EC-4701-B796-87880B9659A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F5B8F0F-F2EC-4701-B796-87880B9659A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F5B8F0F-F2EC-4701-B796-87880B9659A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F5B8F0F-F2EC-4701-B796-87880B9659A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
