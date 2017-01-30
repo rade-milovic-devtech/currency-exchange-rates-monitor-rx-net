@@ -29,9 +29,9 @@ namespace CurrencyExchangeRatesMonitor.Server.Hubs.ExchangeRates
                     while (!autoRunningCancellationToken.IsCancellationRequested)
                     {
                         await SendLatestTradeOffers();
-                        await Task.Delay(20);
+                        await Task.Delay(20, autoRunningCancellationToken.Token);
                     }
-                });
+                }, autoRunningCancellationToken.Token);
         }
 
         public void Stop()
@@ -39,9 +39,7 @@ namespace CurrencyExchangeRatesMonitor.Server.Hubs.ExchangeRates
             if (autoRunningCancellationToken != null)
             {
                 autoRunningCancellationToken.Cancel();
-
-                autoRunningTask.Wait(); // wait for the auto running task to complete
-
+                autoRunningCancellationToken.Dispose();
                 autoRunningCancellationToken = null;
             }
         }
