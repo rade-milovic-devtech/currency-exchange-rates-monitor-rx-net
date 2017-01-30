@@ -7,6 +7,8 @@ namespace CurrencyExchangeRatesMonitor.Server.Hubs.ExchangeRates
 {
     public class TradeOffersPublisher
     {
+        private const int tradeOffersPublishingDelay = 500;
+
         private readonly TradeOffersService service;
         private readonly ContextHolder contextHolder;
         private ILog log;
@@ -29,7 +31,7 @@ namespace CurrencyExchangeRatesMonitor.Server.Hubs.ExchangeRates
                     while (!autoRunningCancellationToken.IsCancellationRequested)
                     {
                         await SendLatestTradeOffers();
-                        await Task.Delay(20, autoRunningCancellationToken.Token);
+                        await Task.Delay(tradeOffersPublishingDelay, autoRunningCancellationToken.Token);
                     }
                 }, autoRunningCancellationToken.Token);
         }
