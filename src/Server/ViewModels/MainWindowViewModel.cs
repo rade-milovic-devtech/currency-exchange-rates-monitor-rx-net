@@ -11,18 +11,23 @@ namespace CurrencyExchangeRatesMonitor.Server.ViewModels
     public class MainWindowViewModel
     {
         private readonly ILog log;
+        private readonly NewTradeOfferViewModel newTradeOfferViewModel;
         private readonly TradeOffersPublisher tradeOffersPublisher;
 
         private IDisposable signalrProcess;
 
-        public MainWindowViewModel(ILog log, TradeOffersPublisher tradeOffersPublisher)
+        public MainWindowViewModel(ILog log, TradeOffersPublisher tradeOffersPublisher,
+            NewTradeOfferViewModel newTradeOfferViewModel)
         {
             this.log = log;
             this.tradeOffersPublisher = tradeOffersPublisher;
+            this.newTradeOfferViewModel = newTradeOfferViewModel;
 
             StartServerCommand = new DelegateCommand(StartServer);
             StopServerCommand = new DelegateCommand(StopServer);
         }
+
+        public NewTradeOfferViewModel NewTradeOfferViewModel => newTradeOfferViewModel;
 
         public ICommand StartServerCommand { get; }
         public ICommand StopServerCommand { get; }

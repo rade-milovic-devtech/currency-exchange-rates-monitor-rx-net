@@ -1,4 +1,5 @@
 ﻿using Autofac.Integration.SignalR;
+using CurrencyExchangeRatesMonitor.Common.Constants;
 using Microsoft.AspNet.SignalR;
 using Microsoft.Owin.Cors;
 using Owin;
@@ -13,7 +14,7 @@ namespace CurrencyExchangeRatesMonitor.Server.Hubs
 
             app.UseAutofacMiddleware(App.Container);
 
-            app.MapSignalR("/signalr", new HubConfiguration()
+            app.MapSignalR(ServerConstants.Path, new HubConfiguration()
             {
                 Resolver = new AutofacDependencyResolver(App.Container)
             });

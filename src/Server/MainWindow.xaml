@@ -1,17 +1,93 @@
 ﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:viewModels="clr-namespace:CurrencyExchangeRatesMonitor.Server.ViewModels"
+        xmlns:valueConverters="clr-namespace:CurrencyExchangeRatesMonitor.Common.ValueConverters;assembly=CurrencyExchangeRatesMonitor.Common"
         x:Class="CurrencyExchangeRatesMonitor.Server.MainWindow"
-        Title="MainWindow"
+        Title="Currency Exchange Rates Monitor - Server"
         Width="525"
         Height="350">
-    <StackPanel Orientation="Horizontal"
-                Margin="10"
-                VerticalAlignment="Top">
-        <Button Content="Start Server"
-                Margin="5"
-                Command="{Binding StartServerCommand}" />
-        <Button Content="Stop Server"
-                Margin="5"
-                Command="{Binding StopServerCommand}" />
-    </StackPanel>
+    <Window.Resources>
+        <DataTemplate x:Key="NewTradeOfferViewModelDataTemplate" DataType="{x:Type viewModels:NewTradeOfferViewModel}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0"
+                       Grid.Column="0"
+                       Content="Traider"
+                       Margin="5" />
+                <TextBox Grid.Row="0"
+                         Grid.Column="1"
+                         Text="{Binding Path=Traider, UpdateSourceTrigger=PropertyChanged}"
+                         Margin="5" />
+                <Label Grid.Row="1"
+                       Grid.Column="0"
+                       Content="Base Currency"
+                       Margin="5" />
+                <TextBox Grid.Row="1"
+                         Grid.Column="1"
+                         Text="{Binding Path=BaseCurrency, UpdateSourceTrigger=PropertyChanged}"
+                         Margin="5" />
+                <Label Grid.Row="2"
+                       Grid.Column="0"
+                       Content="Counter Currency"
+                       Margin="5" />
+                <TextBox Grid.Row="2"
+                         Grid.Column="1"
+                         Text="{Binding Path=CounterCurrency, UpdateSourceTrigger=PropertyChanged}"
+                         Margin="5" />
+                <Label Grid.Row="3"
+                       Grid.Column="0"
+                       Content="Bid Price"
+                       Margin="5" />
+                <TextBox Grid.Row="3"
+                         Grid.Column="1"
+                         Text="{Binding Path=BidPrice, Converter={x:Static valueConverters:DecimalToStringConverter.Instance}, UpdateSourceTrigger=PropertyChanged}"
+                         Margin="5" />
+                <Label Grid.Row="4"
+                       Grid.Column="0"
+                       Content="Ask Price"
+                       Margin="5" />
+                <TextBox Grid.Row="4"
+                         Grid.Column="1"
+                         Text="{Binding Path=AskPrice, Converter={x:Static valueConverters:DecimalToStringConverter.Instance}, UpdateSourceTrigger=PropertyChanged}"
+                         Margin="5" />
+                <Button Grid.Row="5"
+                        Grid.Column="0"
+                        Content="Add"
+                        Command="{Binding Path=AddNewTradeOfferCommand}"
+                        IsDefault="True"
+                        Margin="5" />
+            </Grid>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0"
+                    Orientation="Horizontal"
+                    Margin="10">
+            <Button Content="Start Server"
+                    Command="{Binding StartServerCommand}"
+                    Margin="5" />
+            <Button Content="Stop Server"
+                    Command="{Binding StopServerCommand}"
+                    Margin="5" />
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <ContentControl Content="{Binding NewTradeOfferViewModel}"
+                            ContentTemplate="{StaticResource NewTradeOfferViewModelDataTemplate}" />
+        </Grid>
+    </Grid>
 </Window>

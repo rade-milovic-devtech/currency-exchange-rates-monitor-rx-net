@@ -39,7 +39,7 @@
         <Reference Include="Microsoft.CSharp" />
         <Reference Include="System.Core" />
         <Reference Include="System.Xaml">
-          <RequiredTargetFramework>4.0</RequiredTargetFramework>
+            <RequiredTargetFramework>4.0</RequiredTargetFramework>
         </Reference>
         <Reference Include="WindowsBase" />
         <Reference Include="PresentationCore" />
@@ -84,7 +84,7 @@
             <HintPath>..\..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
         </Reference>
         <Reference Include="System.Web.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+            <HintPath>..\..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
         </Reference>
     </ItemGroup>
     <ItemGroup>
@@ -96,6 +96,7 @@
         <Compile Include="Hubs\ExchangeRates\TradeOffersPublisher.cs" />
         <Compile Include="Services\TradeOffersService.cs" />
         <Compile Include="ViewModels\MainWindowViewModel.cs" />
+        <Compile Include="ViewModels\NewTradeOfferViewModel.cs" />
         <ApplicationDefinition Include="App.xaml">
             <Generator>MSBuild:Compile</Generator>
             <SubType>Designer</SubType>
@@ -109,8 +110,8 @@
             <SubType>Designer</SubType>
         </Page>
         <Compile Include="MainWindow.xaml.cs">
-          <DependentUpon>MainWindow.xaml</DependentUpon>
-          <SubType>Code</SubType>
+            <DependentUpon>MainWindow.xaml</DependentUpon>
+            <SubType>Code</SubType>
         </Compile>
     </ItemGroup>
     <ItemGroup>

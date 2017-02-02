@@ -16,7 +16,7 @@ namespace CurrencyExchangeRatesMonitor.Server.Services
 
         public IEnumerable<TradeOfferDto> GetLatestOffers() =>
             repository.All
-                .GroupBy(tradeOffer => tradeOffer.Traider)
+                .GroupBy(tradeOffer => new { tradeOffer.Traider, tradeOffer.Price.Pair })
                 .Select(group =>
                     group.OrderByDescending(tradeOffer => tradeOffer.Price.ValueDate)
                          .First()
@@ -31,5 +31,7 @@ namespace CurrencyExchangeRatesMonitor.Server.Services
                         MidPrice = tradeOffer.Price.Mid,
                         PriceDate = tradeOffer.Price.ValueDate
                     });
+
+        public void AddNewTradeOffer(TradeOffer tradeOffer) => repository.Add(tradeOffer);
     }
 }

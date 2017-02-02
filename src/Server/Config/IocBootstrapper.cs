@@ -26,6 +26,7 @@ namespace CurrencyExchangeRatesMonitor.Server.Config
             containerBuilder.RegisterType<TradeOffersPublisher>().SingleInstance();
             containerBuilder.RegisterHubs(Assembly.GetExecutingAssembly());
 
+            containerBuilder.RegisterType<NewTradeOfferViewModel>().SingleInstance();
             containerBuilder.RegisterType<MainWindowViewModel>().SingleInstance();
             containerBuilder.RegisterType<MainWindow>().SingleInstance();
 

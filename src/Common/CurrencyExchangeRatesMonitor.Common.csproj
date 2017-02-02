@@ -34,12 +34,17 @@
         <Reference Include="System" />
         <Reference Include="System.Core" />
         <Reference Include="Microsoft.CSharp" />
+        <Reference Include="PresentationFramework" />
+        <Reference Include="WindowsBase" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Constants\ClientConstants.cs" />
         <Compile Include="Constants\ServerConstants.cs" />
-        <Compile Include="ViewModels\DelegateCommand.cs" />
         <Compile Include="Models\TradeOfferDto.cs" />
+        <Compile Include="ValueConverters\DecimalToStringConverter.cs" />
+        <Compile Include="ViewModels\DelegateCommand.cs" />
+        <Compile Include="ViewModels\ViewModelBase.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
