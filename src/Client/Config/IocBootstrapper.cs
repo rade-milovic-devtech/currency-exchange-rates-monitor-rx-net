@@ -4,6 +4,7 @@ using CurrencyExchangeRatesMonitor.Client.Hubs.ExchangeRates;
 using CurrencyExchangeRatesMonitor.Client.Repositories;
 using CurrencyExchangeRatesMonitor.Client.ViewModels;
 using CurrencyExchangeRatesMonitor.Common.Constants;
+using CurrencyExchangeRatesMonitor.Common.Ioc;
 
 namespace CurrencyExchangeRatesMonitor.Client.Config
 {

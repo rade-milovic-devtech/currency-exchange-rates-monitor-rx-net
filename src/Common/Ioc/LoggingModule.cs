@@ -4,7 +4,7 @@ using Autofac;
 using Autofac.Core;
 using log4net;
 
-namespace CurrencyExchangeRatesMonitor.Client.Config
+namespace CurrencyExchangeRatesMonitor.Common.Ioc
 {
     public class LoggingModule : Autofac.Module
     {

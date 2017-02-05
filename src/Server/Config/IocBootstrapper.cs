@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using Autofac;
 using Autofac.Integration.SignalR;
+using CurrencyExchangeRatesMonitor.Common.Ioc;
 using CurrencyExchangeRatesMonitor.Domain.ExchangeRates;
 using CurrencyExchangeRatesMonitor.Infrastructure.ExchangeRates;
 using CurrencyExchangeRatesMonitor.Server.Hubs;
